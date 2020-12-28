@@ -29,7 +29,7 @@ class ComplexNumber:
         :return: None
         """
 
-        # dictionary of all possible sates of j
+        # dictionary of all possible states of j
         conversion_table = {
             0: (self.real + self.imaginary, 0),
             1: (self.real, self.imaginary),
@@ -92,7 +92,7 @@ def division(x: ComplexNumber, y: ComplexNumber) -> ComplexNumber:
     This function divides two complex numbers and returns it's quotient
     :param x: numerator -> Any complex number
     :param y: denominator -> Any complex number
-    :return:
+    :return: <class 'ComplexAlgebra.ComplexNumber'>
     """
 
     z_conj = y.conjugate()
