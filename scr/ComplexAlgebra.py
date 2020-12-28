@@ -1,11 +1,11 @@
 # Copyright 2020 Florian Georg Grabner
-
+#
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
-
-#     http://www.apache.org/licenses/LICENSE-2.0
-
+#
+#         http://www.apache.org/licenses/LICENSE-2.0
+#
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -29,7 +29,7 @@ class ComplexNumber:
         :return: None
         """
 
-        # dictionary of all possible sates of i
+        # dictionary of all possible sates of j
         conversion_table = {
             0: (self.real + self.imaginary, 0),
             1: (self.real, self.imaginary),
@@ -40,6 +40,7 @@ class ComplexNumber:
         index = self.imaginary_exponent % 4
         self.real = conversion_table[index][0]
         self.imaginary = conversion_table[index][1]
+        self.imaginary_exponent = 1
 
     def conjugate(self):
         """
